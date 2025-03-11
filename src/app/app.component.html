@@ -1,13 +1,19 @@
-<h1>Student app</h1>
+<h1>Student App</h1>
 
+<!-- Unordered list to display student data -->
 <ul>
+  <!-- Loop through each student in 'studentData' and display their details -->
   <li *ngFor="let x of studentData">
-    {{x.name}} - {{x.age}} - {{x.id}} - {{x.address}} - {{x.course}}
+    {{ x.name }} - {{ x.age }} - {{ x.id }} - {{ x.address }} - {{ x.course }}
   </li>
 </ul>
 
-<h2>Wheater for Galway</h2>
+<!-- Section for Weather Information -->
+<h2>Weather for Galway</h2>
+
+<!-- Angular's "@for" directive to loop through 'weatherData' -->
 @for(w of weatherData; track w)
 {
-  <p>{{w.main}} - {{w.description}}</p>
+  <!-- Display main weather condition and description -->
+  <p>{{ w.main }} - {{ w.description }}</p>
 }
